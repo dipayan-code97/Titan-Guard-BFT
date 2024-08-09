@@ -32,10 +32,8 @@
   Integrating Titan Honey BFT into Your Application
   To integrate the Titan Honey BFT protocol into your setup, follow these steps:
 
-# Create a new instance of HoneyBadger:
-
-  golang
-  Copy code
+# Create a new instance of Titan Guard Honey Badger BBT : 
+ 
   // Define a Config struct with your preferred settings.
   cfg := hbbft.Config{
       // The number of nodes in the network.
@@ -56,8 +54,6 @@
 # Titan Guard Honey BBT uses an interface to ensure compatibility with various types of transactions.
   The user requirement is that the transaction must implement the Hash() []byte method.
 
-  golang
-  Copy code
   // Transaction is an interface that abstracts the underlying data of the actual
   // transaction, allowing for easy integration with other applications.
   type Transaction interface {
@@ -69,16 +65,12 @@
 
 # Start the engine:
 
-  golang
-  Copy code
   hb.Start() // Begins proposing batches of transactions across the network.
 
 # Consume committed transactions:
 
   Applications can access committed transactions at their convenience. Once consumed, the output will reset for the next batch.
-
-  golang
-  Copy code
+  
   hb.Outputs() // Returns a map of committed transactions per epoch.
   
   for epoch, tx := range hb.Outputs() {
