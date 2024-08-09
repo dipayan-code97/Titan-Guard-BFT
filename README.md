@@ -12,7 +12,7 @@
      * Employs a common coin to ensure that a majority of participants reach consensus, confirming the completion of the RBC process.
    # Asynchronous Common Subset (ACS)
      * Integrates RBC and BBA to reach agreement on a set of encrypted transactions among all participants.
-   # HoneyBadger Protocol
+   # Titan Guard HoneyBadger Protocol
      * The top-level protocol combines RBC, BBA, and ACS into a complete, production-grade consensus engine, 
        designed to withstand Byzantine faults and asynchronous network conditions.
 
@@ -84,7 +84,7 @@
   for epoch, tx := range hb.Outputs() {
     fmt.Printf("batch for epoch %d: %v\n", epoch, tx)
   }
-  A working implementation can be found in the bench folder, where Titan Honey BFT is implemented over local transport.
+  A working implementation can be found in the bench folder, where Titan Guard Honey BFT is implemented over local transport.
 
 # Current Project Features
    * Reliable Broadcast Algorithm
