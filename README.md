@@ -35,6 +35,7 @@
 # Create a new instance of Titan Guard Honey Badger BBT : 
  
   // Define a Config struct with your preferred settings.
+  
   cfg := hbbft.Config{
       // The number of nodes in the network.
       N: 4,
@@ -48,6 +49,7 @@
   }
   
   // Instantiate the HoneyBadger engine using the defined config.
+ 
   hb := hbbft.NewHoneyBadger(cfg)
   Add transactions to the engine:
   
@@ -56,6 +58,7 @@
 
   // Transaction is an interface that abstracts the underlying data of the actual
   // transaction, allowing for easy integration with other applications.
+  
   type Transaction interface {
     Hash() []byte
   }
