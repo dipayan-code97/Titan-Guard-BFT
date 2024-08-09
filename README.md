@@ -53,7 +53,8 @@
   hb := hbbft.NewHoneyBadger(cfg)
   Add transactions to the engine:
   
-# HBBFT uses an interface to ensure compatibility with various types of transactions. The only requirement is that the transaction must implement the Hash() []byte method.
+# Titan Guard Honey BBT uses an interface to ensure compatibility with various types of transactions.
+  The user requirement is that the transaction must implement the Hash() []byte method.
 
   golang
   Copy code
@@ -85,16 +86,8 @@
   }
   A working implementation can be found in the bench folder, where Titan Honey BFT is implemented over local transport.
 
-# Current Project State
+# Current Project Features
    * Reliable Broadcast Algorithm
    * Binary Byzantine Agreement
    * Asynchronous Common Subset
    * HoneyBadger top-level protocol
-# TODO
-   Implement threshold encryption
-   Enable configurable serialization for transactions
-   References
-   The Honey Badger BFT protocols
-   Practical Byzantine Fault Tolerance
-   Threshold encryption
-   Shared secret
