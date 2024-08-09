@@ -34,27 +34,26 @@
 
 # Create a new instance of Titan Guard Honey Badger BBT : 
  
-  // Define a Config struct with your preferred settings.
+   * Golang // Define a Config struct with your preferred settings.
   
-  cfg := hbbft.Config{
-      // The number of nodes in the network.
-      N: 4,
-      // Identifier of this node.
-      ID: 101,
-      // Identifiers of the participating nodes.
-      Nodes: uint64{67, 1, 99, 101},
-      // The preferred batch size. If BatchSize is empty, an ideal batch size will
-      // be chosen for you.
-      BatchSize: 100,
-  }
-  
-  // Instantiate the HoneyBadger engine using the defined config.
- 
-  hb := hbbft.NewHoneyBadger(cfg)
-  Add transactions to the engine:
+     cfg := hbbft.Config{
+         // The number of nodes in the network.
+         N: 4,
+         // Identifier of this node.
+         ID: 101,
+         // Identifiers of the participating nodes.
+         Nodes: uint64{67, 1, 99, 101},
+         // The preferred batch size. If BatchSize is empty, an ideal batch size will
+         // be chosen for you.
+         BatchSize: 100,
+     }
+     
+        // Instantiate the HoneyBadger engine using the defined config.
+           hb := hbbft.NewHoneyBadger(cfg)
+           Add transactions to the engine:
   
 # Titan Guard Honey BBT uses an interface to ensure compatibility with various types of transactions.
-  The user requirement is that the transaction must implement the Hash() []byte method.
+   The user requirement is that the transaction must implement the Hash() []byte method.
 
   // Transaction is an interface that abstracts the underlying data of the actual
   // transaction, allowing for easy integration with other applications.
