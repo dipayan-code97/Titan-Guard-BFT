@@ -1,2 +1,9 @@
-Implement threshold encryption Enable configurable serialization for transactions References 
-The Honey Badger BFT protocols Practical Byzantine Fault Tolerance Threshold encryption Shared secret
+# TODO
+   Implement threshold encryption
+   Enable configurable serialization for transactions
+   References
+   The Titan Guard Honey Badger BFT protocols
+   Practical Byzantine Fault Tolerance
+   Threshold encryption
+   Shared secret
+
