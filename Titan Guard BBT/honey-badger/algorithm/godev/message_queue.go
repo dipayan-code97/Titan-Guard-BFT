@@ -7,7 +7,7 @@ import (
 // MessageTuple holds the payload of the message along with the identifier of
 // the receiver node.
 type MessageTuple struct {
-	destination      uint64
+	destination uint64
 	payload interface{}
 }
 
@@ -22,10 +22,10 @@ func NewMessageQueue() *MessageQueue {
 	}
 }
 
-func (queueRef *MessageQueue) addMessage(message interface{}, to uint64) {
+func (queueRef *MessageQueue) addMessage(message interface{}, destination uint64) {
 	queueRef.rwMutex.Lock()
 	defer queueRef.rwMutex.Unlock()
-	queueRef.queue = append(queueRef.queue, MessageTuple{to, message})
+	queueRef.queue = append(queueRef.queue, MessageTuple{destination, message})
 }
 
 func (queueRef *MessageQueue) addMessages(message ...MessageTuple) {
