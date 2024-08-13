@@ -1,4 +1,4 @@
-package hbbft
+package algorithm
 
 import (
 	"sync"
